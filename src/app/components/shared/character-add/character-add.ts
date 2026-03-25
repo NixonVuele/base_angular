@@ -1,4 +1,4 @@
-import {Component, output, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { Character } from '../../../interfaces/character.interface';
 
 @Component({
@@ -22,12 +22,6 @@ addCharacter() {
         name: this.name(),
         power: this.power()
     }
-
-    // this.characters().push(newCharacter);
-
-    // this.characters.update(
-    //     (list) => [...list, newCharacter]
-    // ); //... operador spread
 
     this.newCharacter.emit(newCharacter);
 

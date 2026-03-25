@@ -30,14 +30,10 @@
 
     <ol>
         @for(character of characters(); track character.id; let idx = $index){
-        @if(character.power > 500){
-        <ul>
+        <li>
             <span>{{idx + 1}} - {{character.name}}</span>
-            <strong class="text-danger"> {{character.power}}</strong>
-        </ul>
-            } @else {
-                <li>hay mas elementos inferiores</li>
-            }   
+            <strong [class.text-danger]="character.power > 500"> {{character.power}}</strong>
+        </li>
         }
 
     </ol>

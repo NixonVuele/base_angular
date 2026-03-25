@@ -3,18 +3,14 @@
 
 <section class="row">
     <div class="col-12 col-sm-6">
-
-        <!-- desde aqui -->
-        <app-character-add 
-        (newCharacter)="addCharacter($event)"/>
-
-        <!-- hasta aqui -->
+        <app-character-add
+        (newCharacter)="dragonballService.addCharacter($event)"/>
     </div>
 
     <div class="col-12 col-sm-6">
-    <app-character-list 
-    [characters]="characters()"
-    [listName]='"Listado de Personajes"'/>
+    <app-character-list
+    [characters]="dragonballService.characters()"
+    [listName]="'Listado de Personajes'"/>
 </div>
 </section>
 
